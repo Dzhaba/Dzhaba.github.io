@@ -30,13 +30,13 @@ export class Table extends Generator {
     const columnSelector = '.column';
 
     $(columnSelector).remove();
-    
+
     for (let i = 0; i < article.length; i++) {
       let info = {
-        image: article[i].urlToImage,
+        image: article[i].urlToImage.replace("http://","https://"),
         title: article[i].title,
         descr: article[i].description,
-        link: article[i].url,
+				link: article[i].url.replace("http://","https://"),
         author: article[i].author,
         time: article[i].publishedAt,
       };
@@ -97,10 +97,10 @@ export class TableVertical extends Generator {
     $(columnSelector).remove();
     for (let i = 0; i < article.length; i++) {
       let info = {
-        image: article[i].urlToImage,
+				image: article[i].urlToImage.replace("http://","https://"),
         title: article[i].title,
         descr: article[i].description,
-        link: article[i].url,
+				link: article[i].url.replace("http://","https://"),
         author: article[i].author,
         time: article[i].publishedAt,
       };
