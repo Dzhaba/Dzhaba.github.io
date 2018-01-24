@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru-Ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-US-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NEWS SITE</title>
+  <!-- SEO -->
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css">
+  <noscript>
+    <style>
+      .main-preloader {
+        display: none !important;
+      }
+    </style>
+  </noscript>
+</head>
+<body>
+<!--[if it IE 8]>
+<p class="browsehappy">Ваш браузер <strong>устарел</strong>. Пожалуйста<a
+    href="http://browsehappy.com/">обновите</a> его.</p>
+<![endif]-->
+<div class="main-preloader">
+  <div class="main-preloader__loader">
+    <svg class="circular" viewBox="25 25 50 50">
+      <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2"
+              stroke-miterlimit="10"/>
+    </svg>
+  </div>
+</div>
+<header class="header">
+  <div class="header__primary-nav">
+    <div class="container">
+      <button class="header__hamburger">
+        <i class="material-icons">menu</i>
+      </button>
+      <a class="header__logo" href="#">News</a>
+      <nav class="header__primary-menu">
+        <ul class="primary-menu__list">
+          <li class="primary-menu__item primary-menu__item_search">
+            <form class="header__search-form" action="#">
+              <div class="search-form__wrap">
+                <button class="search-form__button search-form__button_search">
+                  <i class="material-icons">search</i>
+                </button>
+                <button class="search-form__button search-form__button_close">
+                  <i class="material-icons">close</i>
+                </button>
+                <input autocomplete="off" id="search" type="search" class="search-form__input">
+                <label class="search-form__label" for="search">Search</label>
+              </div>
+            </form>
+          </li>
+          <li class="primary-menu__item primary-menu__item_cards">
+            <button class="primary-menu__button">
+              <i class="material-icons">view_module</i>
+            </button>
+          </li>
+          <li class="primary-menu__item primary-menu__item_cards-vertical">
+            <button class="primary-menu__button">
+              <i class="material-icons">view_list</i>
+            </button>
+          </li>
+          <li class="primary-menu__item primary-menu__item_colors">
+            <a href="#" class="primary-menu__link primary-menu__link_colors">
+              <div class="color-preview"></div>
+            </a>
+            <!--COLORS DROPDOWN-->
+            <ul class="colors-content__list">
+              <li class="colors-content__item">
+                <span data-color="red"
+                      class="colors-content__toggle colors-content__toggle_red"></span>
+                <span data-color="pink"
+                      class="colors-content__toggle colors-content__toggle_pink"></span>
+                <span data-color="purple"
+                      class="colors-content__toggle colors-content__toggle_purple"></span>
+                <span data-color="indigo"
+                      class="colors-content__toggle colors-content__toggle_indigo"></span>
+              </li>
+              <li class="colors-content__item">
+                <span data-color="blue"
+                      class="colors-content__toggle colors-content__toggle_blue"></span>
+                <span data-color="cyan"
+                      class="colors-content__toggle colors-content__toggle_cyan"></span>
+                <span data-color="teal"
+                      class="colors-content__toggle colors-content__toggle_teal"></span>
+                <span data-color="green"
+                      class="colors-content__toggle colors-content__toggle_green"></span>
+              </li>
+              <li class="colors-content__item">
+                <span data-color="lime"
+                      class="colors-content__toggle colors-content__toggle_lime"></span>
+                <span data-color="yellow"
+                      class="colors-content__toggle colors-content__toggle_yellow"></span>
+                <span data-color="orange"
+                      class="colors-content__toggle colors-content__toggle_orange"></span>
+                <span data-color="amber"
+                      class="colors-content__toggle colors-content__toggle_amber"></span>
+              </li>
+              <li class="colors-content__item">
+                <span data-color="brown"
+                      class="colors-content__toggle colors-content__toggle_brown"></span>
+                <span data-color="grey"
+                      class="colors-content__toggle colors-content__toggle_grey"></span>
+                <span data-color="deep-orange"
+                      class="colors-content__toggle colors-content__toggle_deep-orange"></span>
+                <span data-color="blue-grey"
+                      class="colors-content__toggle colors-content__toggle_blue-grey"></span>
+              </li>
+            </ul>
+          </li>
+          <li class="primary-menu__item primary-menu__item_categories">
+            <a class="primary-menu__link primary-menu__link_categories"
+               href="#">All<i class="material-icons right">arrow_drop_down</i></a>
+            <!--CATEGORIES DROPDOWN-->
+            <ul class="categories-content__list">
+              <li class="categories-content__item"><span
+                  class="categories-content__toggle">all</span></li>
+              <li class="categories-content__item"><span
+                  class="categories-content__toggle">business</span></li>
+              <li class="categories-content__item"><span class="categories-content__toggle">entertainment</span>
+              </li>
+              <li class="categories-content__item"><span
+                  class="categories-content__toggle">general</span></li>
+              <li class="categories-content__item"><span
+                  class="categories-content__toggle">health</span></li>
+              <li class="categories-content__item"><span
+                  class="categories-content__toggle">science</span></li>
+              <li class="categories-content__item"><span
+                  class="categories-content__toggle">sports</span></li>
+              <li class="categories-content__item"><span class="categories-content__toggle">technology</span>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="header__sidebar-nav">
+    <nav class="header__mobile-menu">
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item mobile-menu__item_search">
+          <form id="search-mobile" action="#" class="mobile-search-form">
+            <div class="mobile-search-form__wrap">
+              <input id="mobile-input" class="mobile-search-form__input" type="search">
+              <label for="mobile-input" class="mobile-search-form__label">Search</label>
+              <button type="submit" class="mobile-search-form__submit">
+                <i class="material-icons">search</i>
+              </button>
+            </div>
+          </form>
+        </li>
+        <li class="mobile-menu__item mobile-menu__item_categories">
+          <a class="mobile-menu__link mobile-menu__link_categories"
+             href="#">All<i class="mobile-arrow material-icons right">arrow_drop_down</i></a>
+          <!--DROPDOWN-->
+          <ul class="categories-mobile__list">
+            <li class="categories-mobile__item"><span class="categories-mobile__toggle">all</span>
+            </li>
+            <li class="categories-mobile__item"><span
+                class="categories-mobile__toggle">business</span></li>
+            <li class="categories-mobile__item"><span class="categories-mobile__toggle">entertainment</span>
+            </li>
+            <li class="categories-mobile__item"><span
+                class="categories-mobile__toggle">general</span></li>
+            <li class="categories-mobile__item"><span
+                class="categories-mobile__toggle">health</span></li>
+            <li class="categories-mobile__item"><span
+                class="categories-mobile__toggle">science</span></li>
+            <li class="categories-mobile__item"><span
+                class="categories-mobile__toggle">sports</span></li>
+            <li class="categories-mobile__item"><span
+                class="categories-mobile__toggle">technology</span>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main class="main">
+  <div class="container">
+    <noscript>
+      <h1 class="noscript">Ваш браузер не поддерживает JavaScript. Работа с сайтом невозможна!</h1>
+    </noscript>
+    <button id="to-top" class="to-top">
+      <i class="material-icons">keyboard_arrow_up</i>
+    </button>
+    <div class="preloader-wrap">
+      <div class="preloader-wrap__loader">
+        <svg class="circular" viewBox="25 25 50 50">
+          <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2"
+                  stroke-miterlimit="10"/>
+        </svg>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="row">
+      </div>
+
+    </div>
+  </div>
+</main>
+<footer class="footer">
+  <div class="footer__top"></div>
+  <div class="footer__bottom">
+    <div class="container">
+      <span class="bottom__copyright">© <span class="bottom__current-year"></span> Dzhabrail Marhiev, All rights reserved
+        </span>
+      <a href="https://newsapi.org/" class="bottom__news-api">Powered by NewsAPI.org</a>
+    </div>
+  </div>
+</footer>
+<div id="sidenav-overlay"></div>
+</body>
+<!-- JS -->
+<script src="js/libs.min.js"></script>
+<script>
+  window.onload = function() {
+    setTimeout(function() {
+      $('.main-preloader').fadeOut();
+    }, 1000);
+  };
+  $('.bottom__current-year').html((new Date()).getFullYear());
+  window.onscroll = function() {
+    scrollFunction();
+  };
+
+  $('#to-top').on('click', function() {
+    topFunction();
+  });
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      $('#to-top').fadeIn();
+    } else {
+      $('#to-top').fadeOut();
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+</script>
+<script type="module" src="js/main.js"></script>
+</html>

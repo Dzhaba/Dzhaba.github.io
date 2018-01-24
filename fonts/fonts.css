@@ -1,0 +1,35 @@
+@font-face {
+	font-family:  'R-Regular';
+	src: url('roboto/Roboto-Regular.woff') format('woff'),
+		 url('roboto/Roboto-Regular.woff2') format('woff2');
+	font-style:  normal;
+	font-weight:  normal;
+}
+@font-face {
+	font-family:  'R-Bold';
+	src: url('roboto/Roboto-Bold.woff') format('woff'),
+		 url('roboto/Roboto-Bold.woff2') format('woff2');
+	font-style:  normal;
+	font-weight:  normal;
+}
+@font-face {
+	font-family:  'R-Thin';
+	src: url('roboto/Roboto-Thin.woff') format('woff'),
+		 url('roboto/Roboto-Thin.woff2') format('woff2');
+	font-style:  normal;
+	font-weight:  normal;
+}
+@font-face {
+	font-family:  'R-Light';
+	src: url('roboto/Roboto-Light.woff') format('woff'),
+		 url('roboto/Roboto-Light.woff2') format('woff2');
+	font-style:  normal;
+	font-weight:  normal;
+}
+@font-face {
+	font-family:  'R-Medium';
+	src: url('roboto/Roboto-Medium.woff') format('woff'),
+		 url('roboto/Roboto-Medium.woff2') format('woff2');
+	font-style:  normal;
+	font-weight:  normal;
+}
