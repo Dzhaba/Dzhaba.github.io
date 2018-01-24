@@ -40,8 +40,6 @@ export class Table extends Generator {
         author: article[i].author,
         time: article[i].publishedAt,
       };
-      let securedImgLink = info.image.replace('http://','https://');
-      let securedLink = info.link.replace('http://','https://');
       if (!info.image) {
         info.image = 'https://www.sunhome.ru/i/wallpapers/200/planeta-zemlya-kartinka.960x540.jpg';
       }
@@ -56,7 +54,7 @@ export class Table extends Generator {
       $(cardSelector).last().append(
           '<div class="' +
           imgBlockClass +
-          '" style="background: url(' + securedImgLink
+          '" style="background: url(' + info.image
           + ') center 0 no-repeat; background-size: cover;"><div class="img-wrapper"></div><span class="'
           + cardTitleClass + '">' + info.title + '</span></div>');
       $(cardSelector).
@@ -68,7 +66,7 @@ export class Table extends Generator {
           + '</div>');
       $(cardSelector).
       last().
-      append('<div class="' + cardActionClass + '"><a href="' + securedLink
+      append('<div class="' + cardActionClass + '"><a href="' + info.link
           + '" class="' + linkClass
           + '">Read more ...</a></div>');
     }
@@ -106,8 +104,6 @@ export class TableVertical extends Generator {
         author: article[i].author,
         time: article[i].publishedAt,
       };
-      let securedImgLink = info.image.replace("http://","https://");
-      let securedLink = info.link.replace("http://","https://");
       if (!info.image) {
         info.image = 'https://www.sunhome.ru/i/wallpapers/200/planeta-zemlya-kartinka.960x540.jpg';
       }
@@ -121,7 +117,7 @@ export class TableVertical extends Generator {
       $(columnSelector).last().append('<div class="' + cardClass + '"></div>');
       $(cardSelector).last().append(
           '<div class="' +
-          imgBlockClass + '" style="background: url(' + securedImgLink
+          imgBlockClass + '" style="background: url(' + info.image
           + ') center 0 no-repeat; background-size: cover;"></div>',
       );
       $(cardSelector).last().append(
@@ -146,7 +142,7 @@ export class TableVertical extends Generator {
           '"><a class="' +
           linkClass +
           '" href="' +
-          securedLink +
+          info.link +
           '">Read more...</a></div></div>',
       );
     }
