@@ -33,13 +33,15 @@ export class Table extends Generator {
 
     for (let i = 0; i < article.length; i++) {
       let info = {
-        image: article[i].urlToImage.replace("http://","https://"),
+        image: article[i].urlToImage,
         title: article[i].title,
         descr: article[i].description,
-				link: article[i].url.replace("http://","https://"),
+        link: article[i].url,
         author: article[i].author,
         time: article[i].publishedAt,
       };
+      let securedImgLink = info.image.replace('http://','https://');
+      let securedLink = info.link.replace('http://','https://');
       if (!info.image) {
         info.image = 'https://www.sunhome.ru/i/wallpapers/200/planeta-zemlya-kartinka.960x540.jpg';
       }
@@ -54,7 +56,7 @@ export class Table extends Generator {
       $(cardSelector).last().append(
           '<div class="' +
           imgBlockClass +
-          '" style="background: url(' + info.image
+          '" style="background: url(' + securedImgLink
           + ') center 0 no-repeat; background-size: cover;"><div class="img-wrapper"></div><span class="'
           + cardTitleClass + '">' + info.title + '</span></div>');
       $(cardSelector).
@@ -66,7 +68,7 @@ export class Table extends Generator {
           + '</div>');
       $(cardSelector).
       last().
-      append('<div class="' + cardActionClass + '"><a href="' + info.link
+      append('<div class="' + cardActionClass + '"><a href="' + securedLink
           + '" class="' + linkClass
           + '">Read more ...</a></div>');
     }
@@ -97,13 +99,15 @@ export class TableVertical extends Generator {
     $(columnSelector).remove();
     for (let i = 0; i < article.length; i++) {
       let info = {
-				image: article[i].urlToImage.replace("http://","https://"),
+        image: article[i].urlToImage,
         title: article[i].title,
         descr: article[i].description,
-				link: article[i].url.replace("http://","https://"),
+        link: article[i].url,
         author: article[i].author,
         time: article[i].publishedAt,
       };
+      let securedImgLink = info.image.replace("http://","https://");
+      let securedLink = info.link.replace("http://","https://");
       if (!info.image) {
         info.image = 'https://www.sunhome.ru/i/wallpapers/200/planeta-zemlya-kartinka.960x540.jpg';
       }
@@ -117,7 +121,7 @@ export class TableVertical extends Generator {
       $(columnSelector).last().append('<div class="' + cardClass + '"></div>');
       $(cardSelector).last().append(
           '<div class="' +
-          imgBlockClass + '" style="background: url(' + info.image
+          imgBlockClass + '" style="background: url(' + securedImgLink
           + ') center 0 no-repeat; background-size: cover;"></div>',
       );
       $(cardSelector).last().append(
@@ -142,7 +146,7 @@ export class TableVertical extends Generator {
           '"><a class="' +
           linkClass +
           '" href="' +
-          info.link +
+          securedLink +
           '">Read more...</a></div></div>',
       );
     }
