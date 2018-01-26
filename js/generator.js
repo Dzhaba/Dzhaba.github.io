@@ -1,4 +1,5 @@
 import {dateFormat} from './formatter.js';
+import {resetInfo} from './updateui.js';
 
 export class Generator {
   constructor() {
@@ -19,7 +20,6 @@ export class Table extends Generator {
     const linkClass = 'card__link';
     const imgBlockClass = 'card__image-wrap';
     const cardContentClass = 'card__content';
-    // const cardImageClass = 'card__image';
     const cardActionClass = 'card__action';
     const cardAuthorClass = 'card__author';
     const cardTitleClass = 'card__title';
@@ -29,7 +29,9 @@ export class Table extends Generator {
     const rowSelector = '.row';
     const columnSelector = '.column';
 
-    $(columnSelector).remove();
+    if (resetInfo) {
+      $(columnSelector).remove();
+    }
 
     for (let i = 0; i < article.length; i++) {
       let info = {
@@ -94,7 +96,10 @@ export class TableVertical extends Generator {
     const rowSelector = '.row';
     const columnSelector = '.column';
 
-    $(columnSelector).remove();
+    if (resetInfo) {
+      $(columnSelector).remove();
+    }
+
     for (let i = 0; i < article.length; i++) {
       let info = {
         image: article[i].urlToImage,
