@@ -9,8 +9,8 @@ function getJSON(url, success) {
       /** @namespace jsonData.articles */
       let articleList = jsonData.articles;
       if (articleList.length == 0) {
+        $('.pagination').hide();
         if ($('.nothing-found').length == 0) {
-          $('.pagination').hide();
           $('.main').
           append('<h1 class="nothing-found"> Ничего не найдено!</h1>');
         }
