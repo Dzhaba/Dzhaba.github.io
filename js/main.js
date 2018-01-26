@@ -108,11 +108,13 @@ $(document).ready(function() {
     $MOBILE_SEARCH_WRAP.addClass('focused');
   });
 
-  $SEARCH_BUTTON.on('click', function() {
+  $SEARCH_BUTTON.on('click', function(e) {
+    e.preventDefault();
     $SEARCH_FORM_WRAP.addClass('focused');
     $SEARCH_FORM_INPUT.focus();
   });
-  $CLOSE_BUTTON.on('click', function() {
+  $CLOSE_BUTTON.on('click', function(e) {
+    e.preventDefault();
     $SEARCH_FORM_WRAP.removeClass('focused');
   });
 //--------------------------------SEARCH-DESKTOP---------------------------------//
