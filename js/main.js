@@ -59,7 +59,6 @@ let colors = {
   'blue-grey': '#37474f',
 };
 let generator = new Table();
-let cardsType = 'horizontal';
 let category = 'all';
 let keywords = '';
 
@@ -70,7 +69,7 @@ $(document).ready(function() {
   $REFRESH.on('click', function(e) {
     e.preventDefault();
     updateUi();
-  })
+  });
 
 //--------------------------------HAMBURGER---------------------------------//
   $HAMBURGER.on('click', function() {
@@ -133,10 +132,7 @@ $(document).ready(function() {
   //--------------------------------SEARCH-MOBILE---------------------------------//
   $MOBILE_SEARCH_FORM.on('submit', function(e) {
     e.preventDefault();
-    if ($MOBILE_SEARCH_INPUT.val() == '') {
-      return;
-    }
-    else {
+    if ($MOBILE_SEARCH_INPUT.val() !== '') {
       keywords = $MOBILE_SEARCH_INPUT.val();
       updateUi();
       keywords = '';
@@ -168,16 +164,16 @@ $(document).ready(function() {
   $CATEGORIES_DROPDOWN_TOGGLE.on('click', function() {
         $SEARCH_FORM_WRAP.removeClass('focused');
         $SEARCH_FORM_INPUT.val('');
-        if (category != $(this).html()) {
+        if (category !== $(this).html()) {
           category = $(this).html();
           $CATEGORIES_LINK.
-          html(capitalizeFormat($(this).html())
-              + '<i class="material-icons right">arrow_drop_down</i>');
+          html(`${capitalizeFormat($(this).
+          html())}<i class="material-icons right">arrow_drop_down</i>`);
           $('.mobile-menu__link_categories').
-          html(capitalizeFormat($(this).html())
-              + '<i class="material-icons right">arrow_drop_down</i>');
+          html(`${capitalizeFormat($(this).
+          html())}<i class="material-icons right">arrow_drop_down</i>`);
           updateUi();
-          if ($(this).html() == 'all') {
+          if ($(this).html() === 'all') {
             category = 'all';
             updateUi();
           }
@@ -189,16 +185,16 @@ $(document).ready(function() {
         $MMENU.css('transform', 'translateX(-300px)');
         $OVERLAY.css('display', 'none');
         $MOBILE_SEARCH_INPUT.val('');
-        if (category != $(this).html()) {
+        if (category !== $(this).html()) {
           category = $(this).html();
           $CATEGORIES_LINK.
-          html(capitalizeFormat($(this).html())
-              + '<i class="material-icons right">arrow_drop_down</i>');
+          html(`${capitalizeFormat($(this).
+          html())}<i class="material-icons right">arrow_drop_down</i>`);
           $MOBILE_CATEGORIES_LINK.
-          html(capitalizeFormat($(this).html())
-              + '<i class="material-icons right">arrow_drop_down</i>');
+          html(`${capitalizeFormat($(this).
+          html())}<i class="material-icons right">arrow_drop_down</i>`);
           updateUi();
-          if ($(this).html() == 'all') {
+          if ($(this).html() === 'all') {
             category = 'all';
             updateUi();
           }
@@ -212,19 +208,19 @@ $(document).ready(function() {
   });
   $COLORS_DROPDOWN_TOGGLE.on('click', function() {
     let mainColor = $(this).attr('data-color');
-    if (mainColor == currentColor) {
+    if (mainColor === currentColor) {
       return;
     }
     $COLOR_PREVIEW.
     css('background-color', '' + colors['' + mainColor + ''] + '');
     for (let i = 0; i < colorableBackgroundParts.length; i++) {
-      $('' + colorableBackgroundParts[i] + '').addClass('' + mainColor + '');
-      $('' + colorableBackgroundParts[i] + '').
-      removeClass('' + currentColor + '');
+      $(`${colorableBackgroundParts[i]}`).addClass(`${mainColor}`);
+      $(`${colorableBackgroundParts[i]}`).
+      removeClass(`${currentColor}`);
     }
     for (let i = 0; i < colorableTextParts.length; i++) {
       $('' + colorableTextParts[i] + '').
-      css('color', '' + colors['' + mainColor + ''] + '');
+      css('color', `${colors['' + mainColor + '']}`);
     }
     currentColor = mainColor;
   });
@@ -233,16 +229,25 @@ $(document).ready(function() {
     $(this).hide();
     $CARDS.fadeIn();
     generator = new Table();
-    cardsType = 'horizontal';
+    if ($SEARCH_FORM_INPUT.val().length >= 3) {
+      keywords = $SEARCH_FORM_INPUT.val();
+    }
     updateUi();
+    keywords = '';
   });
   $CARDS.on('click', function() {
     $(this).hide();
     $CARDS_VERTICAL.fadeIn();
     generator = new TableVertical();
-    cardsType = 'vertical';
+    if ($SEARCH_FORM_INPUT.val().length >= 3) {
+      keywords = $SEARCH_FORM_INPUT.val();
+    }
+    if ($MOBILE_SEARCH_INPUT.val().length !== 0) {
+      keywords = $MOBILE_SEARCH_INPUT.val();
+    }
     updateUi();
+    keywords = '';
   });
 });
 
-export {generator, category, keywords, cardsType};
+export {generator, category, keywords};
