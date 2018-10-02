@@ -3,13 +3,13 @@ import {generator, category, keywords} from './main.js';
 
 const $PAGINATION = $('.pagination');
 let resetInfo = true;
-let apiKey = 'c48ac15e851a4259b83bc767309360ed';
+let apiKey = '90295e44bf10493ba368bd7693cc0566';
 let page = 1;
 let country = 'us';
 let endPoint = 'top-headlines';
 let link = 'https://newsapi.org/v2/';
 let search = false;
-let defaultLink = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=c48ac15e851a4259b83bc767309360ed';
+let defaultLink = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=90295e44bf10493ba368bd7693cc0566';
 let currentLink = '';
 function extractPageNumber(string) {
   let stringArray = string.split('&');
