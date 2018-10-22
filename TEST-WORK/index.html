@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Test Work</title>
+	<link href="css/main.css" rel="stylesheet"></head>
+	<body>
+		<div class="wrapper">
+			<main class="main">
+				<div class="container">
+					<div class="cat-food__header">
+						<h1>Ты сегодня покормил кота?</h1>
+					</div>
+					<ul class="cat-food-list">
+						<li class="cat-food__item">
+							<div data-product="Фуа-Гра" id="foie" class="cat-food__block">
+								<a class="cat-food__link" id="foie-link" href="#"></a>
+								<div class="cat-food__disabled-wrapper hidden"></div>
+								<span class="cat-food__slogan">Сказочное заморское яство</span>
+								<span class="hidden cat-food__slogan-hover">Котэ не одобряет?</span>
+								<h3 class="cat-food__company">Нямушка</h3>
+								<h3 class="cat-food__consist">с фуа-гра</h3>
+								<span class="cat-food__amount">40 порций<br>мышь в подарок </span>
+								<div class="cat-food__weight-block"><span class="cat-food__weight">0,5</span><span class="cat-food__unit">кг</span></div>
+							</div>
+							<div class="cat-food__descriptions">
+								<span class="default-description">Чего сидишь? Порадуй котэ, <span id="foie-buy" data-product="Фуа-Гра" class="default-description__buy">купи.</span></span>
+								<span class="hover-description hidden">Печень утки разварная с артишоками.</span>
+								<span class="disabled-description hidden">Печалька, с фуа-гра закончился.</span>
+							</div>
+						</li>
+						<li class="cat-food__item">
+							<div data-product="Рыба" id="fish" class="selected cat-food__block">
+								<a class="cat-food__link" id="fish-link" href="#"></a>
+								<div class="cat-food__disabled-wrapper hidden"></div>
+								<span class="cat-food__slogan">Сказочное заморское яство</span>
+								<span class="hidden cat-food__slogan-hover">Котэ не одобряет?</span>
+								<h3 class="cat-food__company">Нямушка</h3>
+								<h3 class="cat-food__consist">с рыбой</h3>
+								<span class="cat-food__amount">40 порций<br>2 мыши в подарок </span>
+								<div class="cat-food__weight-block"><span class="cat-food__weight">2</span><span class="cat-food__unit">кг</span></div>
+							</div>
+							<div class="cat-food__descriptions">
+								<span class="default-description hidden">Чего сидишь? Порадуй котэ, <span id="fish-buy" data-product="Рыба" class="default-description__buy">купи.</span></span>
+								<span class="hover-description">Головы щучьи с чесноком да свежайшая сёмгушка.</span>
+								<span class="disabled-description hidden">Печалька, с рыбой закончился.</span>
+							</div>
+						</li>
+						<li class="cat-food__item">
+							<div data-product="Курица" id="chicken" class="disabled cat-food__block">
+								<a class="cat-food__link" id="chicken-link" href="#"></a>
+								<div class="cat-food__disabled-wrapper"></div>
+								<span class="cat-food__slogan">Сказочное заморское яство</span>
+								<span class="hidden cat-food__slogan-hover">Котэ не одобряет?</span>
+								<h3 class="cat-food__company">Нямушка</h3>
+								<h3 class="cat-food__consist">с курой</h3>
+								<span class="cat-food__amount">40 порций<br>5 мыши в подарок</br>заказчик доволен</span>
+								<div class="cat-food__weight-block"><span class="cat-food__weight">5</span><span class="cat-food__unit">кг</span></div>
+							</div>
+							<div class="cat-food__descriptions">
+								<span class="default-description hidden">Чего сидишь? Порадуй котэ, <span id="chicken-buy" data-product="Курица" class="default-description__buy">купи.</span></span>
+								<span class="hover-description hidden">Филе из цыплят с трюфелями в бульоне.</span>
+								<span class="disabled-description">Печалька, с курой закончился.</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</main>
+		</div>
+	  <script
+	   src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+ crossorigin="anonymous"></script>	
+	<script type="text/javascript" src="js/bundle.js"></script></body>
+</html>
